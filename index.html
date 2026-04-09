@@ -201,3 +201,16 @@ animate();
 
 </body>
 </html>
+<div id="menu"></div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("menu"));
+
+if(data){
+  document.getElementById("menu").innerHTML = `
+    <img src="${data.img}" width="200">
+    <h3>${data.name}</h3>
+    <p>$${data.price}</p>
+  `;
+}
+</script>
